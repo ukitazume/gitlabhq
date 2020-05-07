@@ -8,7 +8,7 @@ def linux_only(require_as)
   RUBY_PLATFORM.include?('linux') && require_as
 end
 
-gem "rails", "3.2.13"
+gem "rails", "4.0.0"
 
 # Supported DBs
 gem "mysql2", group: :mysql
@@ -83,7 +83,7 @@ gem "unicorn", '~> 4.6.3', group: :unicorn
 gem "state_machine"
 
 # Issue tags
-gem "acts-as-taggable-on"
+gem "acts-as-taggable-on", ">= 2.4.1"
 
 # Background jobs
 gem 'slim'
