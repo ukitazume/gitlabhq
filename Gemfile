@@ -8,18 +8,18 @@ def linux_only(require_as)
   RUBY_PLATFORM.include?('linux') && require_as
 end
 
-gem "rails", "3.2.13"
+gem "rails", "5.0.0"
 
 # Supported DBs
 gem "mysql2", group: :mysql
 gem "pg", group: :postgres
 
 # Auth
-gem "devise", '~> 2.2'
-gem 'omniauth', "~> 1.1.3"
-gem 'omniauth-google-oauth2'
-gem 'omniauth-twitter'
-gem 'omniauth-github'
+gem "devise", "~> 4.0", ">= 4.0.0"
+gem 'omniauth', '~> 1.1.4'
+gem 'omniauth-google-oauth2', '>= 0.1.19'
+gem 'omniauth-twitter', '>= 0.0.17'
+gem 'omniauth-github', '>= 1.1.0'
 
 # Extracting information from a git repository
 # Provide access to Gitlab::Git library
@@ -55,7 +55,7 @@ gem 'enumerize'
 gem "kaminari", "~> 0.14.1"
 
 # HAML
-gem "haml-rails"
+gem "haml-rails", ">= 0.5.3"
 
 # Files attachments
 gem "carrierwave"
@@ -77,17 +77,17 @@ gem "github-markup", "~> 0.7.4", require: 'github/markup'
 gem  "asciidoctor"
 
 # Application server
-gem "unicorn", '~> 4.6.3', group: :unicorn
+gem "unicorn", "~> 4.6.3", group: :unicorn
 
 # State machine
 gem "state_machine"
 
 # Issue tags
-gem "acts-as-taggable-on"
+gem "acts-as-taggable-on", ">= 3.1.0"
 
 # Background jobs
 gem 'slim'
-gem 'sinatra', require: nil
+gem 'sinatra', '>= 2.0.0', require: nil
 gem 'sidekiq'
 
 # HTTP requests
@@ -103,7 +103,7 @@ gem 'settingslogic'
 gem "foreman"
 
 # Cache
-gem "redis-rails"
+gem "redis-rails", ">= 5.0.0"
 
 # Campfire integration
 gem 'tinder', '~> 1.9.2'
@@ -112,7 +112,7 @@ gem 'tinder', '~> 1.9.2'
 gem "hipchat", "~> 0.9.0"
 
 # d3
-gem "d3_rails", "~> 3.1.4"
+gem "d3_rails", "~> 3.1.10"
 
 # underscore-rails
 gem "underscore-rails", "~> 1.4.4"
@@ -121,31 +121,31 @@ gem "underscore-rails", "~> 1.4.4"
 gem "sanitize"
 
 group :assets do
-  gem "sass-rails"
-  gem "coffee-rails"
+  gem "sass-rails", ">= 5.0.5"
+  gem "coffee-rails", ">= 4.1.1"
   gem "uglifier"
   gem "therubyracer"
-  gem 'turbolinks'
-  gem 'jquery-turbolinks'
+  gem 'turbolinks', '>= 1.2.0'
+  gem 'jquery-turbolinks', '>= 1.0.0'
 
-  gem 'chosen-rails',     "1.0.0"
-  gem 'select2-rails'
+  gem 'chosen-rails', '1.0.0'
+  gem 'select2-rails', '>= 3.4.2'
   gem 'jquery-atwho-rails', "0.3.0"
-  gem "jquery-rails",     "2.1.3"
-  gem "jquery-ui-rails",  "2.0.2"
+  gem "jquery-rails", "4.4.0"
+  gem "jquery-ui-rails", "2.0.2"
   gem "modernizr",        "2.6.2"
   gem "raphael-rails",    git: "https://github.com/gitlabhq/raphael-rails.git"
   gem 'bootstrap-sass'
-  gem "font-awesome-rails"
+  gem "font-awesome-rails", ">= 4.5.0.1"
   gem "gemoji", "~> 1.2.1", require: 'emoji/railtie'
-  gem "gon"
+  gem "gon", ">= 4.1.1"
 end
 
 group :development do
   gem "annotate", git: "https://github.com/ctran/annotate_models.git"
   gem "letter_opener"
-  gem 'quiet_assets', '~> 1.0.1'
-  gem 'rack-mini-profiler'
+  gem 'quiet_assets', '~> 1.0.2'
+  gem 'rack-mini-profiler', '>= 0.1.26'
   # Better errors handler
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -156,20 +156,20 @@ group :development do
   gem "sdoc"
 
   # thin instead webrick
-  gem 'thin'
+  gem 'thin', '>= 1.5.1'
 end
 
 group :development, :test do
   gem 'coveralls', require: false
-  gem 'rails-dev-tweaks'
-  gem 'spinach-rails'
-  gem "rspec-rails"
-  gem "capybara"
+  gem 'rails-dev-tweaks', '>= 1.1.0'
+  gem 'spinach-rails', '>= 0.2.1'
+  gem "rspec-rails", ">= 2.13.2"
+  gem "capybara", ">= 2.1.0"
   gem "pry"
   gem "awesome_print"
   gem "database_cleaner"
   gem "launchy"
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '>= 4.2.1'
 
   # Prevent occasions where minitest is not bundled in packaged versions of ruby (see #3826)
   gem 'minitest', '~> 4.7.0'
@@ -190,7 +190,7 @@ group :development, :test do
   gem 'poltergeist', '~> 1.3.0'
 
   gem 'spork', '~> 1.0rc'
-  gem 'jasmine'
+  gem 'jasmine', '>= 2.0.0'
 end
 
 group :test do
