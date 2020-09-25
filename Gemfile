@@ -138,7 +138,7 @@ group :assets do
   gem 'bootstrap-sass'
   gem "font-awesome-rails"
   gem "gemoji", "~> 1.2.1", require: 'emoji/railtie'
-  gem "gon"
+  gem "gon", ">= 6.4.0"
 end
 
 group :development do
