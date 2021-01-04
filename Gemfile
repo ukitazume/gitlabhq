@@ -35,7 +35,7 @@ gem 'gitlab_omniauth-ldap', '1.0.3', require: "omniauth-ldap"
 gem "gitlab-pygments.rb", '~> 0.3.2', require: 'pygments.rb'
 
 # Git Wiki
-gem "gitlab-gollum-lib", "~> 1.0.1", require: 'gollum-lib'
+gem "gitlab-gollum-lib", "~> 4.2.7", require: 'gollum-lib'
 
 # Language detection
 gem "github-linguist", require: "linguist"
@@ -61,7 +61,7 @@ gem "haml-rails"
 gem "carrierwave"
 
 # for aws storage
-gem "fog", "~> 1.3.1", group: :aws
+gem "fog", "~> 1.14.0", group: :aws
 
 # Authorization
 gem "six"
@@ -118,7 +118,7 @@ gem "d3_rails", "~> 3.1.4"
 gem "underscore-rails", "~> 1.4.4"
 
 # Sanitize user input
-gem "sanitize"
+gem "sanitize", ">= 2.0.5"
 
 group :assets do
   gem "sass-rails"
@@ -162,9 +162,9 @@ end
 group :development, :test do
   gem 'coveralls', require: false
   gem 'rails-dev-tweaks'
-  gem 'spinach-rails'
+  gem 'spinach-rails', '>= 0.2.1'
   gem "rspec-rails"
-  gem "capybara"
+  gem "capybara", ">= 2.1.0"
   gem "pry"
   gem "awesome_print"
   gem "database_cleaner"
