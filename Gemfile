@@ -16,10 +16,10 @@ gem "pg", group: :postgres
 
 # Auth
 gem "devise", '~> 2.2'
-gem 'omniauth', "~> 1.1.3"
-gem 'omniauth-google-oauth2'
+gem 'omniauth', '~> 2.0.0'
+gem 'omniauth-google-oauth2', '>= 0.2.5'
 gem 'omniauth-twitter'
-gem 'omniauth-github'
+gem 'omniauth-github', '>= 2.0.0'
 
 # Extracting information from a git repository
 # Provide access to Gitlab::Git library
@@ -70,7 +70,7 @@ gem "six"
 gem "seed-fu"
 
 # Markdown to HTML
-gem "redcarpet",     "~> 2.2.2"
+gem "redcarpet", "~> 3.5.1"
 gem "github-markup", "~> 0.7.4", require: 'github/markup'
 
 # Asciidoc to HTML
