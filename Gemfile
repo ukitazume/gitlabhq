@@ -18,7 +18,7 @@ gem "pg", group: :postgres
 gem "devise", '~> 2.2'
 gem 'omniauth', "~> 1.1.3"
 gem 'omniauth-google-oauth2'
-gem 'omniauth-twitter'
+gem 'omniauth-twitter', '>= 0.0.17'
 gem 'omniauth-github'
 
 # Extracting information from a git repository
